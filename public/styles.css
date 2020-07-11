@@ -1,0 +1,14 @@
+html {
+    box-sizing: border-box;
+}
+
+.add-employee {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+    text-align: center;
+}

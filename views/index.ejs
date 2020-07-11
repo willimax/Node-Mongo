@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Funcionários</title>
+</head>
+<body>
+    <h1>Funcionários cadastrados na empresa</h1>
+    <a href="/cadastrar">Cadastrar novo funcionário</a>
+    <% if (funcionarios.length > 0) { %>
+        <table>
+            <thead>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Cargo</th>
+                <th>Setor</th>
+                <th>Salário</th>
+            </thead>
+            <% funcionarios.forEach(funcionario => { %>
+                <tbody>
+                    <td><%= funcionario.nome %></td>
+                    <td><%= funcionario.sobrenome %></td>
+                    <td><%= funcionario.cargo %></td>
+                    <td><%= funcionario.setor %></td>
+                    <td><%= funcionario.salario %></td>
+                </tbody>
+            <% }) %>
+        </table>
+    <% } else { %>
+        <h3>Nenhum usuário encontrado</h3>
+    <% } %>
+</body>
+</html>
